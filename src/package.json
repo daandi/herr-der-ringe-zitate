@@ -1,0 +1,30 @@
+{
+  "name": "herr-der-ringe-zitate",
+  "version": "1.0.0",
+  "description": "Zitate aus Tolkiens Herr der Ringe",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "publish": "zip -r herr-der-ringe-zitate.zip ./ && aws lambda update-function-code --function-name=herr-der-ringe-zitate --zip-file=fileb://herr-der-ringe-zitate.zip && rm -f herr-der-ringe-zitate.zip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/daandi/herr-der-ringe-zitate-alexa.git"
+  },
+  "keywords": [
+    "alexa"
+  ],
+  "author": "Andreas Neumann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daandi/herr-der-ringe-zitate-alexa/issues"
+  },
+  "homepage": "https://github.com/daandi/herr-der-ringe-zitate-alexa#readme",
+  "dependencies": {
+    "alexa-sdk": "^1.0.6"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
